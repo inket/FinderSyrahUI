@@ -20,7 +20,7 @@ EXPORT OSErr HandleLoadEvent(const AppleEvent* ev, AppleEvent* reply, long refco
 
 + (void)load
 {
-    NSRunAlertPanel(@"FinderSyrahUI installed!", @"When you click \"Ok\", your Finder's windows will look different. To go back to the standard Finder, launch \"Unload SyrahUI\".", @"Ok", nil, nil);
+//    NSRunAlertPanel(@"FinderSyrahUI installed!", @"When you click \"Ok\", your Finder's windows will look different. To go back to the standard Finder, launch \"Unload SyrahUI\".", @"Ok", nil, nil);
 }
 
 @end
