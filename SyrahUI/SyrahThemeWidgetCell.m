@@ -18,7 +18,8 @@ static NSImage *_syrahZoomGlyph;
 
 + (void)load
 {
-    [SyrahUI swizzleInstanceMethod:@selector(drawWithFrame:inView:) withMethod:@selector(drawWithFrame:inView:) renameOriginalTo:@selector(originalDrawWithFrame:inView:) originalClass:[_NSThemeWidgetCell class] newClass:[self class]];
+    // Commented this line in order to keep the system's default traffic lights.
+//    [SyrahUI swizzleInstanceMethod:@selector(drawWithFrame:inView:) withMethod:@selector(drawWithFrame:inView:) renameOriginalTo:@selector(originalDrawWithFrame:inView:) originalClass:[_NSThemeWidgetCell class] newClass:[self class]];
 }
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
