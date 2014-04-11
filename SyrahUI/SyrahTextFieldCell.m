@@ -23,7 +23,10 @@
 
 - (void)setFont:(NSFont *)fontObj
 {
-    [self originalSetFont:[NSFont fontWithName:@"Helvetica" size:fontObj.pointSize]];
+    if ([fontObj.fontName isEqualToString:@"LucidaGrande"])
+        [self originalSetFont:[NSFont fontWithName:@"Helvetica" size:fontObj.pointSize]];
+    else
+        [self originalSetFont:fontObj];
 }
 
 @end
