@@ -66,7 +66,10 @@
         return;
     }
 
-    [SyrahThemeFrame enableBlurForWindow:self.window];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"SyrahUIWhite"])
+        [self.window setBackgroundColor:[NSColor whiteColor]];
+    else
+        [SyrahThemeFrame enableBlurForWindow:self.window];
     
     [[NSColor clearColor] setFill];
     NSRectFill(dirtyRect);
