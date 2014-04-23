@@ -81,9 +81,12 @@
     
     [bezel addClip];
     
-    NSSize titleSize = [NSThemeFrame _titleCellSizeForTitle:self.window.title styleMask:self.window.styleMask];
-    NSRect titleRect = NSMakeRect(NSWidth(self.frame)/2-titleSize.height/2, NSHeight(self.frame)-titleSize.height, titleSize.width, titleSize.height);
-    [self _drawTitleStringIn:titleRect withColor:[NSColor blackColor]];
+    if (self.window.title)
+    {
+        NSSize titleSize = [NSThemeFrame _titleCellSizeForTitle:self.window.title styleMask:self.window.styleMask];
+        NSRect titleRect = NSMakeRect(NSWidth(self.frame)/2-titleSize.height/2, NSHeight(self.frame)-titleSize.height, titleSize.width, titleSize.height);
+        [self _drawTitleStringIn:titleRect withColor:[NSColor blackColor]];
+    }
 }
 
 typedef void * CGSConnection;
